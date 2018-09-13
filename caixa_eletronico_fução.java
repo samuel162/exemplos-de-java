@@ -24,7 +24,7 @@ public class Atividade1 {
                     saldo = obj.Sacar(saldo);
                     break;
                 case 4:
-                    obj.sair();
+                    sair = obj.sair(sair);
                     break;
                 default:
                     System.out.println("Coloque uma opção valida");
@@ -61,15 +61,15 @@ public class Atividade1 {
         return saldo - Sacar;
     }
 
-    public double sair() {
+    public boolean sair(boolean sair) {
         Scanner tcl = new Scanner(System.in);
         System.out.println("Deseja realmente sair. Se sim digite 1 se não digite 2");
         double receber = tcl.nextDouble();
         if (receber == 1) {
-            boolean sair = true;
+            sair = true;
         } else {
-            boolean sair = false;
+            sair = false;
         }
-        return 2;
+        return sair;
     }
 }
